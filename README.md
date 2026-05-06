@@ -21,15 +21,15 @@ The goal was to convert negative slack (timing violations) into positive slack (
 
 Initial run (Run1_before_fix) showed:
 
-- ❌ Negative Setup Slack
-- ❌ Negative Hold Slack
-- ⚠️ Possible congestion / placement inefficiencies
+- Negative Setup Slack
+- Negative Hold Slack
+-  Possible congestion / placement inefficiencies
 
 These issues can lead to functional failure in silicon if not fixed.
 
 ---
 
-🔍 Root Cause (Assumed)
+# Root Cause (Assumed)
 
 - Sub-optimal placement
 - Routing congestion
@@ -53,18 +53,18 @@ Timing was improved by tuning:
 
 * Before Fix (Run1)
 
-- Setup Slack: Negative ❌
-- Hold Slack: Negative ❌
+- Setup Slack: Negative 
+- Hold Slack: Negative 
 - Evidence:
   - Logs: "Run1_before_fix/logs/"
   - DEF: "Run1_before_fix/results/"
   - Screenshots: timing violation & layout view
 
 
-  After Fix (Run2)
+ * After Fix (Run2)
    tr
-- Setup Slack: Positive ✅
-- Hold Slack: Positive ✅
+- Setup Slack: Positive 
+- Hold Slack: Positive 
 - Evidence:
   - Logs: "Run2_after_fixed/logs/"
   - DEF: "Run2_after_fixed/results/"
@@ -72,7 +72,7 @@ Timing was improved by tuning:
 
 ---
 
-📁 Repository Structure
+# Repository Structure
 
 Run1_before_fix/
   ├── logs/
@@ -91,7 +91,7 @@ README.md
 
 ---
 
-🖼️ Key Observations
+# Key Observations
 
 - Timing violations successfully removed
 - Improved placement and routing quality
@@ -99,7 +99,7 @@ README.md
 
 ---
 
-🎯 Conclusion
+ # Conclusion
 
 This project shows a complete timing closure cycle:
 
@@ -110,7 +110,7 @@ This project shows a complete timing closure cycle:
 
 ---
 
-🚀 Future Improvements
+* Future Improvements
 
 - Add detailed timing report comparison (numerical values)
 - Include congestion maps
